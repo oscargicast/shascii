@@ -14,19 +14,19 @@ $ mkdir .zsh && cd .zsh
 $ https://github.com/oskargicast/shascii.git
 ```
 
-Then we need to this line to the the end of .bashrc or .zshrc.
+Then we need to add this line to the the end of the .bashrc or .zshrc config files.
 
 ```bash
 python ~/.zsh/shascii/welcome.py 
 ```
 
-Or just execute this, to bash.
+Or just execute this, for bash.
 
 ```bash
 $ echo "\npython ~/.zsh/shascii/welcome.py" >> .bashrc
 ```
 
-Or this, to zsh:
+Or this, for zsh:
 ```bash
 $ echo "\npython ~/.zsh/shascii/welcome.py" >> .zhrc
 ```
