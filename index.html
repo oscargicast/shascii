@@ -53,6 +53,30 @@
 The main goal of this project is to brag every time we open our terminal. Enjoy it.</p>
 
 <p><img src="https://raw.githubusercontent.com/oskargicast/shascii/gh-pages/images/terminal1.png" alt="demo image"></p>
+
+<h2>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>We download the project.</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>mkdir .zsh <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .zsh
+<span class="nv">$ </span>https://github.com/oskargicast/shascii.git
+</pre></div>
+
+<p>Then we need to add this line to the the end of the .bashrc or .zshrc config files.</p>
+
+<div class="highlight highlight-bash"><pre>python ~/.zsh/shascii/welcome.py 
+</pre></div>
+
+<p>Or just execute this, for bash.</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"\npython ~/.zsh/shascii/welcome.py"</span> &gt;&gt; .bashrc
+</pre></div>
+
+<p>Or this, for zsh:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"\npython ~/.zsh/shascii/welcome.py"</span> &gt;&gt; .zhrc
+</pre></div>
       </section>
 
       <footer>
