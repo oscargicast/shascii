@@ -6,7 +6,7 @@ from functools import wraps
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ASCII_FILE = "ascii_spider.txt"
+ASCII_FILE = "ascii/spider.txt"
 
 
 def _get_terminal_size_linux():
@@ -69,7 +69,7 @@ def print_welcome_message():
     print_center_terminal(welcome_msg)
 
 
-@add_color(color=41)
+@add_color(color=42)
 def print_time():
     time = datetime.now()
     welcome_msg = time.strftime('%b %d, %Y')
