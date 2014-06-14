@@ -3,10 +3,7 @@ import struct
 
 from datetime import datetime
 from functools import wraps
-
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ASCII_FILE = "ascii/spider.txt"
+from settings import *
 
 
 def _get_terminal_size_linux():
@@ -64,7 +61,8 @@ def print_ascii_art(filepath):
 
 @add_color(color=97)
 def print_welcome_message():
-    welcome_msg = "Welcome my lord, " + \
+    global WELCOME_MESSAGE
+    welcome_msg = WELCOME_MESSAGE + ', ' + \
         os.environ.get("USER") + "... the red spider"
     print_center_terminal(welcome_msg)
 
@@ -72,8 +70,8 @@ def print_welcome_message():
 @add_color(color=42)
 def print_time():
     time = datetime.now()
-    welcome_msg = time.strftime('%b %d, %Y')
-    print_center_terminal(welcome_msg)
+    time_msg = time.strftime('%b %d, %Y')
+    print_center_terminal(time_msg)
 
 
 def main():
