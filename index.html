@@ -52,7 +52,7 @@
 <p>Shascii is a terminal splash screen based on ascii art. Ideal for bash or sh consoles.
 The main goal of this project is to brag every time we open our terminal. Enjoy it.</p>
 
-<p><img src="https://raw.githubusercontent.com/oskargicast/shascii/gh-pages/images/terminal1.png" alt="demo image"></p>
+<p><img src="https://raw.githubusercontent.com/oskargicast/shascii/gh-pages/images/spider.png" alt="demo image"></p>
 
 <h2>
 <a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
@@ -77,6 +77,26 @@ The main goal of this project is to brag every time we open our terminal. Enjoy 
 
 <div class="highlight highlight-bash"><pre><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"\npython ~/.zsh/shascii/welcome.py"</span> &gt;&gt; .zhrc
 </pre></div>
+
+<h2>
+<a name="customizing-the-shell" class="anchor" href="#customizing-the-shell"><span class="octicon octicon-link"></span></a>Customizing the shell</h2>
+
+<p>You can see and edit the default configuration in this file:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>cat ~/.zsh/shascii/message.json
+</pre></div>
+
+<p>For instance, if you edit <em>message.json</em> with this:</p>
+
+<div class="highlight highlight-bash"><pre><span class="o">{</span>
+    <span class="s2">"asci-art"</span>: <span class="s2">"chasqui.txt"</span>,
+    <span class="s2">"welcome-message"</span>: <span class="s2">"Hi shascii"</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>You will get this awesome <strong><a href="http://en.wikipedia.org/wiki/Chaski">peruvian chasqui</a></strong>, pronounced like <em>/shascii/</em></p>
+
+<p><img src="https://raw.githubusercontent.com/oskargicast/shascii/gh-pages/images/chasqui.png" alt="demo image"></p>
       </section>
 
       <footer>
