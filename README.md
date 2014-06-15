@@ -30,3 +30,24 @@ Or this, for zsh:
 ```bash
 $ echo "\npython ~/.zsh/shascii/welcome.py" >> .zhrc
 ```
+
+## Customizing the shell
+
+You can see and edit the default configuration in this file:
+
+```bash
+$ cat ~/.zsh/shascii/message.json
+```
+
+For instance, if you edit *message.json* with this:
+
+```bash
+{
+    "asci-art": "chasqui.txt",
+    "welcome-message": "Hi shascii"
+}
+```
+
+You will get this awesome **[peruvian chasqui](http://en.wikipedia.org/wiki/Chaski)**, pronounced like */shascii/*
+
+![demo image](https://raw.githubusercontent.com/oskargicast/shascii/gh-pages/images/chasqui.png)
