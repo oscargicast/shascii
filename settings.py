@@ -10,6 +10,7 @@ with open(CONFIG_FILE, 'r') as filename:
     content = json.loads(filename.read())
 
     ASCII_FILE = os.path.join(
-        os.path.join(BASE_DIR, "ascii"), content["asci-art"]
+        os.path.join(BASE_DIR, "ascii"), content.get("asci-art")
     )
-    WELCOME_MESSAGE = content["welcome-message"]
+    WELCOME_MESSAGE = content.get("welcome-message")
+    RANDOM_MESSAGES = content.get("random-messages")

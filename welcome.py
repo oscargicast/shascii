@@ -3,6 +3,7 @@ import struct
 
 from datetime import datetime
 from functools import wraps
+from random import choice
 from settings import *
 
 
@@ -63,7 +64,7 @@ def print_ascii_art(filepath):
 def print_welcome_message():
     global WELCOME_MESSAGE
     welcome_msg = WELCOME_MESSAGE + ', ' + \
-        os.environ.get("USER") + "... the red spider"
+        os.environ.get("USER") + "... " + choice(RANDOM_MESSAGES)
     print_center_terminal(welcome_msg)
 
 

@@ -1,4 +1,11 @@
 {
     "asci-art": "spider.txt",
-    "welcome-message": "Welcome my lord"
+    "welcome-message": "Welcome my lord",
+    "random-messages": [
+        "the purple spider",
+        "the shiny octopus",
+        "the three-headed python",
+        "the wise elephant",
+        "the red viper"
+    ]
 }
