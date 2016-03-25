@@ -38,17 +38,17 @@ def _get_terminal_size_linux():
 
 def print_center_terminal(string):
     twidth = _get_terminal_size_linux()[0]
-    print '\n'.join(
+    print('\n'.join(
         ('{:^%s}' % twidth).format(s) for s in string.split('\n')
-    )
+    ))
 
 
 def add_color(color=33):
     def _add_color(func):
         def _decorator(*args, **kwargs):
-            print "\033[%sm" % color
+            print("\033[%sm" % color)
             func(*args, **kwargs)
-            print "\033[0m"
+            print("\033[0m")
         return wraps(func)(_decorator)
     return _add_color
 
