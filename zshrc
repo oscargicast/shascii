@@ -122,3 +122,5 @@ export EDITOR='vim'
 
 # Import .zsh_profile
 [ -f ~/.zsh_profile ] && source ~/.zsh_profile
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

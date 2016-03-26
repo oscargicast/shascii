@@ -2,8 +2,8 @@
 alias emacs='emacs -nw'
 
 # Play sound after command
-alias s='notify-send -i /usr/share/icons/Numix-Circle/48x48/apps/checkbox.svg Done "Task completed" && aplay -q ~/.zsh/shascii/sounds/done.wav 2>/dev/null'
-alias k='aplay -q ~/.zsh/shascii/sounds/i-will-kill-you.wav 2>/dev/null'
+alias s='notify-send -u critical -i /usr/share/icons/Numix-Circle/48x48/apps/checkbox.svg Done "Task completed" && aplay -q ~/shascii/sounds/done.wav 2>/dev/null'
+alias k='aplay -q ~/shascii/sounds/i-will-kill-you.wav 2>/dev/null'
 
 # Virtualenv3
 alias virtualenv3='virtualenv --python=python3'
