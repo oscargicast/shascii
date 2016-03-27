@@ -10,9 +10,9 @@ export TERM="xterm-256color"
 python ~/shascii/welcome.py
 
 # Virtualenvwrapper
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PROJECT_HOME=$HOME/projects
-#source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/projects
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Android-studio
 if [ -d "$HOME/android-studio/bin/" ] ; then
@@ -23,9 +23,6 @@ fi
 if [ -d "$HOME/eagle-7.1.0/bin/" ] ; then
     PATH="$HOME/eagle-7.1.0/bin:$PATH"
 fi
-
-# Powerline Theme
-# . ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
@@ -59,18 +56,19 @@ export AWS_SECRET_KEY=pOTi643lpMOnekiwY/haGnOgUNTpzJyQyWeK5Y7G
 export PATH=~/node/bin:$PATH
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# Startup tmux
+if [[ -z "$TMUX" ]]; then
+  exec tmux -2
+fi
+
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 
 if [[ -d $PYENV_ROOT ]]; then
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    # Please make sure is placed toward the end.
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-fi
-
-if [[ -z "$TMUX" ]]; then
-  exec tmux -2
+	export PATH="$PYENV_ROOT/bin:$PATH"
+	# Please make sure is placed toward the end.
+	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
 fi
 
 # Ruby
