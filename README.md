@@ -28,7 +28,7 @@ $ echo "\npython ~/.zsh/shascii/welcome.py" >> .bashrc
 
 Or this, for zsh:
 ```bash
-$ echo "\npython ~/.zsh/shascii/welcome.py" >> .zhrc
+$ echo "\npython ~/.zsh/shascii/welcome.py" >> .zshrc
 ```
 
 ## Customizing the shell
