@@ -23,7 +23,7 @@ python ~/.zsh/shascii/welcome.py
 Or just execute this, for bash.
 
 ```bash
-$ echo "\npython ~/.zsh/shascii/welcome.py" >> .bashrc
+$ echo -e "\npython ~/.zsh/shascii/welcome.py" >> .bashrc
 ```
 
 Or this, for zsh:
