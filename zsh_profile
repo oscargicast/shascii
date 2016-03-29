@@ -54,7 +54,8 @@ export AWS_SECRET_KEY=pOTi643lpMOnekiwY/haGnOgUNTpzJyQyWeK5Y7G
 
 # Node
 export PATH=~/node/bin:$PATH
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Startup tmux
 if [[ -z "$TMUX" ]]; then
