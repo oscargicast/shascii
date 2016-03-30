@@ -9,6 +9,10 @@ export TERM="xterm-256color"
 # Print welcome message
 python ~/shascii/welcome.py
 
+# Bullet Train oh-my-zsh theme
+export BULLETTRAIN_VIRTUALENV_BG=203
+export BULLETTRAIN_DIR_BG=75
+
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
