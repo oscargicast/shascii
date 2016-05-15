@@ -124,3 +124,7 @@ export EDITOR='vim'
 [ -f ~/.zsh_profile ] && source ~/.zsh_profile
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "/home/oscar/.gvm/scripts/gvm" ]] && source "/home/oscar/.gvm/scripts/gvm"
+
+[ -s "/home/oscar/.scm_breeze/scm_breeze.sh" ] && source "/home/oscar/.scm_breeze/scm_breeze.sh"
