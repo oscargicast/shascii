@@ -1,11 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/oscar/.oh-my-zsh
 
-# Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="bullet-train"
+ZSH_THEME="spaceship"
+#ZSH_THEME="bullet-train"
+#ZSH_THEME="amuse"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,6 +49,7 @@ ZSH_THEME="bullet-train"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  #virtualenvwrapper 
   bower
   celery
   copydir
@@ -88,15 +88,12 @@ plugins=(
   vagrant
   vi-mode
   virtualenv
-  virtualenvwrapper 
   web-search
 )
 
 # User configuration
 
 export PATH="$PATH/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -115,16 +112,6 @@ export EDITOR='vim'
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Import .zsh_profile
 [ -f ~/.zsh_profile ] && source ~/.zsh_profile
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "/home/oscar/.gvm/scripts/gvm" ]] && source "/home/oscar/.gvm/scripts/gvm"
-
-[ -s "/home/oscar/.scm_breeze/scm_breeze.sh" ] && source "/home/oscar/.scm_breeze/scm_breeze.sh"

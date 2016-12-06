@@ -12,11 +12,13 @@ python ~/shascii/welcome.py
 # Bullet Train oh-my-zsh theme
 export BULLETTRAIN_VIRTUALENV_BG=203
 export BULLETTRAIN_DIR_BG=75
+export BULLETTRAIN_NVM_SHOW=true
 
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
+[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
 
 # Android-studio
 if [ -d "$HOME/android-studio/bin/" ] ; then
@@ -43,16 +45,6 @@ source ~/shascii/scripts/copy.bash
 # Mongodb
 export PATH=~/mongodb/bin:$PATH
 
-# Shared Libraries
-# export LD_LIBRARY_PATH=/usr/lib:/usr/lib32:/usr/lib64:$LD_LIBRARY_PATH
-
-# EC2.
-export EC2_HOME=~/ec2/ec2-api-tools-1.7.3.0
-export PATH=$PATH:$EC2_HOME/bin
-export EC2_URL=https://ec2.us-west-2.amazonaws.com
-export AWS_ACCESS_KEY=AKIAIURVZZRYDQ6ONHFA
-export AWS_SECRET_KEY=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
-
 # Golang
 [[ -s "/home/oscar/.gvm/scripts/gvm" ]] && source "/home/oscar/.gvm/scripts/gvm"
 
@@ -63,8 +55,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Startup tmux
 if [[ -z "$TMUX" ]]; then
-  exec tmux -2
+	exec tmux -2
 fi
+# Completion and alias with mux shortcut.
+source ~/.bin/tmuxinator.zsh
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -76,6 +70,21 @@ if [[ -d $PYENV_ROOT ]]; then
 	eval "$(pyenv virtualenv-init -)"
 fi
 
-# Ruby
-export PATH="$PATH:$HOME/.rvm/bin"
+# Rbenv
+export RBENV_ROOT="$HOME/.rbenv"
+
+if [[ -d $RBENV_ROOT ]]; then
+	export PATH="$RBENV_ROOT/bin:$PATH"
+	# Please make sure is placed toward the end.
+	eval "$(rbenv init -)"
+fi
+
+# RVM. We must use Rbenv or RVM at the same time.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Autoenv
+[[ -s "$HOME/.autoenv/activate.sh" ]] && source "$HOME/.autoenv/activate.sh"
+
+# SCM Breeze.
+[ -s "/home/oscar/.scm_breeze/scm_breeze.sh" ] && source "/home/oscar/.scm_breeze/scm_breeze.sh"
