@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/oscar/.oh-my-zsh
 
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="spaceship"
+ZSH_THEME="dgnest"
+#ZSH_THEME="spaceship"
 #ZSH_THEME="bullet-train"
 #ZSH_THEME="amuse"
 
@@ -49,13 +49,14 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  #virtualenvwrapper 
   bower
   celery
   copydir
   copyfile
   cp
   django
+  docker 
+  docker-compose
   fabric
   gem
   git
@@ -72,6 +73,8 @@ plugins=(
   pep8
   pip
   postgres
+  pyenv 
+  #pyenv-virtualenv
   pylint
   python
   rails

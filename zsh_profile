@@ -17,7 +17,6 @@ export BULLETTRAIN_NVM_SHOW=true
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
-#source /usr/local/bin/virtualenvwrapper.sh
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
 
 # Android-studio
@@ -45,7 +44,7 @@ source ~/shascii/scripts/copy.bash
 # Mongodb
 export PATH=~/mongodb/bin:$PATH
 
-# Golang
+# GVM. Enable this line first when install 1.4: export CGO_ENABLED=0 
 [[ -s "/home/oscar/.gvm/scripts/gvm" ]] && source "/home/oscar/.gvm/scripts/gvm"
 
 # Node
