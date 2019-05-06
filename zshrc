@@ -61,6 +61,7 @@ plugins=(
   gem
   git
   git-extras
+  git-extra-commands
   git-flow
   gitignore
   go
@@ -95,9 +96,15 @@ plugins=(
 )
 
 # User configuration
-
 export PATH="$PATH/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 source $ZSH/oh-my-zsh.sh
+
+# Antigen
+source ~/.bin/antigen.zsh
+antigen bundle git 
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle https://github.com/caarlos0/zsh-git-sync
+antigen apply
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8

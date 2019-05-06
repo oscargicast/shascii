@@ -7,7 +7,7 @@ fi
 export TERM="xterm-256color"
 
 # Print welcome message
-python ~/shascii/welcome.py
+# python ~/shascii/welcome.py
 
 # Bullet Train oh-my-zsh theme
 export BULLETTRAIN_VIRTUALENV_BG=203
@@ -48,9 +48,19 @@ export PATH=~/mongodb/bin:$PATH
 [[ -s "/home/oscar/.gvm/scripts/gvm" ]] && source "/home/oscar/.gvm/scripts/gvm"
 
 # Node
-export PATH=~/node/bin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Lf
+LFCD="$HOME/.bin/lfcd.sh"
+if [ -f "$LFCD" ]; then
+	source "$LFCD"
+	bindkey -s '^o' 'lfcd\n'  # zsh
+fi
+
+# Blender 
+export PATH=~/.blender:$PATH
 
 # Startup tmux
 if [[ -z "$TMUX" ]]; then
@@ -82,8 +92,8 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# Autoenv
-[[ -s "$HOME/.autoenv/activate.sh" ]] && source "$HOME/.autoenv/activate.sh"
+# Autoenv 
+source ~/.autoenv/activate.sh
 
 # SCM Breeze.
 [ -s "/home/oscar/.scm_breeze/scm_breeze.sh" ] && source "/home/oscar/.scm_breeze/scm_breeze.sh"

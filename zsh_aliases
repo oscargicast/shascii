@@ -30,14 +30,17 @@ alias memcached='~/memcached-1.4.25/memcached'
 alias android='$HOME/android-studio/bin/studio.sh'
 alias adb=$HOME/android-sdk/platform-tools/adb
 
-# Eagle
-alias eagle='eagle'
-
 # Arduino
 alias arduino='~/arduino-1.0.6/arduino'
 
-# Ngrok 
-alias ngrok='~/.ngrok2/ngrok'
+# Glance
+alias glances='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --network host -it docker.io/nicolargo/glances'
 
-# Topcoder
-alias topcoder='javaws ~/topcoder/ContestAppletProd.jnlp'
+# Dockly
+alias dockly='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock lirantal/dockly'
+
+# Docker
+alias docker-clean='docker container ls -a -q || docker container stop $(docker container ls -a -q) && docker system prune -a -f --volumes'
+
+# Trinity 
+alias trinity='~/trinity/trinity-desktop-0.4.6.AppImage'
